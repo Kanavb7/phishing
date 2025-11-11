@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Awareness Alert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .warning-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .highlight {
+            color: #ff6b6b;
+        }
+        
+        p {
+            color: #4a5568;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .info-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+        
+        .info-box h2 {
+            color: #2d3748;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box li {
+            color: #4a5568;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .info-box li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-icon">⚠️</div>
+        <h1>🎣 <span class="highlight">You've Been Phished!</span></h1>
+        <p><strong>This was a security awareness test.</strong></p>
+        <p>You just executed a command from an untrusted source. In a real attack, this could have compromised your system, stolen credentials, or installed malware.</p>
+        
+        <div class="info-box">
+            <h2>What You Should Never Do:</h2>
+            <ul>
+                <li>Copy and paste commands from unknown sources</li>
+                <li>Run scripts without understanding what they do</li>
+                <li>Trust "quick fixes" from unverified websites or emails</li>
+                <li>Execute commands with sudo without verification</li>
+                <li>Click on suspicious links in emails or messages</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h2>What You Should Do Instead:</h2>
+            <ul>
+                <li>Always verify the source of commands and scripts</li>
+                <li>Read and understand commands before executing them</li>
+                <li>Contact your IT security team if unsure</li>
+                <li>Use official documentation and trusted sources</li>
+                <li>Report suspicious emails or messages immediately</li>
+            </ul>
+        </div>
+        
+        <p><strong>Remember:</strong> Real attackers use similar techniques. Stay vigilant and think before you click or paste!</p>
+        
+        <a href="#" class="cta-button" onclick="alert('Great! Stay safe and always verify before you trust.'); return false;">I Understand</a>
+        
+        <div class="footer">
+            <p>This is an educational demonstration for security awareness training.</p>
+            <p>No harm was done to your system. Please report this to your security team if this was unexpected.</p>
+        </div>
+    </div>
+</body>
+</html>
